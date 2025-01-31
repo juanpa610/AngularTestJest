@@ -1,0 +1,9 @@
+<p>albums works!</p>
+
+<section class="container__albums">
+   
+    <div class="container__albums__album" *ngFor="let album of albums" [appHoverDinamicColor]="album.color" >
+        <p>{{album.title}}, Color: {{album.color}}</p>
+    </div>
+
+</section>

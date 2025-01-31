@@ -1,0 +1,14 @@
+.container__albums {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &__album {
+        width: max-content;
+        border: 1px solid rgba(128, 128, 128, 0.164);
+        border-radius: 3px;
+        padding: 1rem;
+        cursor: pointer;
+    }
+}
