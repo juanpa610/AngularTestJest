@@ -1,6 +1,6 @@
 # JestAngular1720
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.  NODE v22.11.0  Angular CLI: 17.2.0 OS: win32 x64 Package Manager: npm 10.9.0
 
 ## Development server
 
