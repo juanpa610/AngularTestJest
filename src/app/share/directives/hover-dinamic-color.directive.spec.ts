@@ -9,7 +9,6 @@ fdescribe('HoverDinamicColorDirective', () => {
   beforeEach(() => {
     mockElementRef = { nativeElement: document.createElement('div') };
     directive = new HoverDinamicColorDirective(mockElementRef);
-
   });
 
   it('should create an instance', () => {
@@ -18,7 +17,6 @@ fdescribe('HoverDinamicColorDirective', () => {
 
   it('should change background color on mouse over', () => {
     directive.hoverColor = 'red';
-    console.log('HoverDinamicColorDirective', directive.hoverColor);
     directive.onMouseOver();
 
     expect(mockElementRef.nativeElement.style.backgroundColor).toBe('red');

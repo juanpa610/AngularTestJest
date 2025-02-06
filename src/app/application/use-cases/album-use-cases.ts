@@ -10,9 +10,11 @@ import { Observable } from "rxjs";
 })
 export class GetAlbumUseCases {
     constructor(private _albumGateWay: AlbumGateway) { }
+
     getAlbumById(id: number): Observable<Album> {
         return this._albumGateWay.getByID(id);
     }
+
     getAllAlbum(): Observable<Album[]> {
         return this._albumGateWay.getAll();
     }

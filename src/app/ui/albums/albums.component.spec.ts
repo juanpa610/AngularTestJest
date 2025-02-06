@@ -45,7 +45,6 @@ describe('AlbumsComponent', () => {
     httpMock = TestBed.inject(HttpTestingController);
 
     compile = fixture.nativeElement;
-
   });
 
 

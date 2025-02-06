@@ -1,0 +1,17 @@
+<p>users works!</p>
+
+<div class="input-select-transition">
+    <label for="">Escribe solo numeros</label>
+    <!-- <input [appNumbersOnly]="'[^a-zA-ZñÑ ,]'" maxlength="30" formControlName="" type="text" name="" placeholder=""/> -->
+    <input [appNumbersOnly]="pattern" maxlength="30" type="text" name="" placeholder=""/>
+</div>
+
+<section class="container__users">
+
+    <div class="container__users__user" *ngFor="let user of users">
+
+        <p>{{user.website}}</p>
+        <p>{{user.website | website}}</p>
+
+    </div>
+</section>

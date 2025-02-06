@@ -29,10 +29,10 @@ describe('AlbumService', () => {
 
   it('should get info from API', () => {
     const testValue: Album[] = [
-      {userId: 1,id: 1,title: 'Test Post',color: 'red'},
-      {userId: 1,id: 1,title: 'Test Post',color: 'red'},
-      {userId: 1,id: 1,title: 'Test Post',color: 'red'},
-    ]
+      { userId: 1, id: 1, title: 'Test Post', color: 'red' },
+      { userId: 1, id: 1, title: 'Test Post', color: 'red' },
+      { userId: 1, id: 1, title: 'Test Post', color: 'red' },
+    ];
 
     service.getAll().subscribe((value) => {
       expect(value).toBe(testValue);
@@ -44,8 +44,8 @@ describe('AlbumService', () => {
     req.flush(testValue);
   });
 
-  it(`should get album by id`,() => {
-    const testValue: Album= {userId: 1,id: 1,title: 'Test Post',color: 'red'};
+  it(`should get album by id`, () => {
+    const testValue: Album = { userId: 1, id: 1, title: 'Test Post', color: 'red' };
 
     service.getByID(testValue.id).subscribe((value) => {
       expect(value).toEqual(testValue);

@@ -1,0 +1,13 @@
+.container__users {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    border-radius: .5rem;
+    padding: 1rem;
+
+    &__user {
+        border: 1px solid rgba(18, 227, 241, 0.534);
+    }
+}

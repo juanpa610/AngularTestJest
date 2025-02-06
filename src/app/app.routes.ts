@@ -4,8 +4,12 @@ export const routes: Routes = [
 
     {
         path: '',
-        redirectTo: 'album',
+        redirectTo: 'users',
         pathMatch: 'full'
+    },
+    {
+        path: 'users',
+        loadChildren : () => import('./ui/users/users/users.module').then(m => m.UsersModule)
     },
     {
         path: 'album',

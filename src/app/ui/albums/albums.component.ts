@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Album } from '../../domain/interface/album.interface';
-import { Router } from '@angular/router';
 import { GetAlbumUseCases } from '../../application/use-cases/album-use-cases';
 
 @Component({
@@ -13,11 +12,10 @@ export class AlbumsComponent implements OnInit {
 
   albums: Array<Album> = [];
 
-  constructor(private albumUseCases: GetAlbumUseCases, private route: Router) {
+  constructor(private readonly albumUseCases: GetAlbumUseCases) {
   }
   
   ngOnInit(): void {
-    console.log("Ejecutando ngOnInit...");
     this.getAlbums();
   }
 
