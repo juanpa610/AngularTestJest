@@ -15,6 +15,7 @@ module.exports = {
     coverageDirectory: "./coverage",
     collectCoverageFrom: [
         "src/app/**/*.ts",
+        "!src/app/**/*.module.ts",
         "!src/app/app.routes.ts",
         "!src/app/app.config.ts",
         "!<rootDir>/node_modules/",

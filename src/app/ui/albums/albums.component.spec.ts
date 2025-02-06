@@ -12,6 +12,11 @@ import { AlbumService } from '../../infraestructure/driven-adapters/album/album.
 
 jest.mock('../../application/use-cases/album-use-cases');
 
+const dummyAlbums: Album[] = [
+  { userId: 1, id: 1, title: "Álbum 1", color: "red" },
+  { userId: 1, id: 2, title: "Álbum 2", color: "green" }
+];
+
 describe('AlbumsComponent', () => {
   let dummyAlbumsResponse: Album[] = [
     { userId: 1, id: 1, title: "quidem molest ", color: "red" },
@@ -49,15 +54,12 @@ describe('AlbumsComponent', () => {
 
 
   it('should create', () => {
+    service.getAllAlbum.mockReturnValue(of(dummyAlbums));
+    fixture.detectChanges();
     expect(component).toBeTruthy();
   });
 
   it(`should get all albums in ngOnInit`, () => {
-    const dummyAlbums: Album[] = [
-      { userId: 1, id: 1, title: "Álbum 1", color: "red" },
-      { userId: 1, id: 2, title: "Álbum 2", color: "green" }
-    ];
-
     service.getAllAlbum.mockReturnValue(of(dummyAlbums));
 
     fixture.detectChanges();

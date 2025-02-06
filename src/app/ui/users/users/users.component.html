@@ -11,7 +11,7 @@
     <div class="container__users__user" *ngFor="let user of users">
 
         <p>{{user.website}}</p>
-        <p>{{user.website | website}}</p>
+        <p>{{user.website | website:'https':'://'}}</p>
 
     </div>
 </section>

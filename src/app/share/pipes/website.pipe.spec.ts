@@ -14,8 +14,7 @@ describe('WebsitePipe', () => {
   });
 
   it('should return a string like `https://conrad.com`', () => {
-
-    const webSiteTransform = pipe.transform(domain);
+    const webSiteTransform = pipe.transform(domain, 'https', '://');
     expect(webSiteTransform).toBe(expectedWebSiteUrl);
   });
 

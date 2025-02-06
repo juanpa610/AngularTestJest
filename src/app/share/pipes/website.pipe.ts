@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class WebsitePipe implements PipeTransform {
 
-  transform(value: string, ...args: unknown[]): unknown {
-    return `https://${value}`;
+  transform(value: string, ...args: string[]): unknown {
+    return `${args[0]}${args[1]}${value}`;
   }
 
 }
